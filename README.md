@@ -1,3 +1,3 @@
 # TPs
-Trabalhos Práticos das disciplinas de Algoritmos e Estruturas de Dados (AEDS).
-Universidade Federal de Minas Gerais;
+(Trabalhos Práticos) works of the disciplines of Algorithms and Data Structures (AEDS). 
+Federal University of Minas Gerais
