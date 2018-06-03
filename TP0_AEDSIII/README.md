@@ -1,2 +1,2 @@
-Trabalho Prático 0 - AEDS III
-Dicionário utilizando árvore trie. 
+TP0 - AEDS III
+Implement Dictionary Using Binary Search Tree
