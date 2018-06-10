@@ -3,21 +3,21 @@
 #include <math.h>
 //LFU (Last Frequently Use)
 
-int full_lfu=0;//Verifica se todos os frames est„o preenchidos
-int longestop_lfu(int qpage){//entrada pagina referenciada, qntd de p·ginas, acessos
+int full_lfu=0;//Verifica se todos os frames est√£o preenchidos
+int longestop_lfu(int qpage){//entrada pagina referenciada, qntd de p√°ginas, acessos
 	int min,repp,i,ctr[qpage];
 	min = 0;
-  for(i=0; i< qpage; i++) // a p·gina com menos frequencia eh selecionada para sair
+  for(i=0; i< qpage; i++) // a p√°gina com menos frequencia eh selecionada para sair
 		if(ctr[min]>ctr[i])
 			min=i;
 			repp = min;
 			return repp;
 }
 
-int pagerep_lfu(int p,int qpage) { // page - replaced (repıe p·gina)
-  int temp = 0,repp = 0; // p·gina q derev· ser substituida
+int pagerep_lfu(int p,int qpage) { // page - replaced (rep√µe p√°gina)
+  int temp = 0,repp = 0; // p√°gina q derev√° ser substituida
 
-	repp = longestop_lfu(qpage); // p·gina q ir· sair selecionada. FunÁ„o para auxiliar na reposiÁ„o.
+	repp = longestop_lfu(qpage); // p√°gina q ir√° sair selecionada. Fun√ß√£o para auxiliar na reposi√ß√£o.
   int *frame;
   frame = malloc(qpage*(sizeof(int)));
   int *ctr;
@@ -25,9 +25,9 @@ int pagerep_lfu(int p,int qpage) { // page - replaced (repıe p·gina)
 
   temp = frame[repp];
   frame[repp] = p;
-  ctr[repp] = 1;//Uma nova p·gina ser· trazida,contador È definido como 1
+  ctr[repp] = 1;//Uma nova p√°gina ser√° trazida,contador √© definido como 1
 
-  return temp;   //retorna p·gina q ser· retirada
+  return temp;   //retorna p√°gina q ser√° retirada
   free(frame);
   free(ctr);
 }
@@ -39,11 +39,11 @@ void pagefault_lfu(int p, int qpage) {
   frame = malloc(qpage*(sizeof(int)));
   if(full_lfu != qpage){
     ctr[full_lfu]++;
-		frame[full_lfu++] = p;//AtÈ que todos os frames estejam cheios, n„o h· pedido de substituiÁ„o de p·gina
+		frame[full_lfu++] = p;//At√© que todos os frames estejam cheios, n√£o h√° pedido de substitui√ß√£o de p√°gina
   }else{ pagerep_lfu(p,qpage);}
 }
 
-int findpage_lfu(int p, int qpage) { //Pesquisar e retornar o flag que indica se a p·gina j· est· presente no frame ou n„o
+int findpage_lfu(int p, int qpage) { //Pesquisar e retornar o flag que indica se a p√°gina j√° est√° presente no frame ou n√£o
   int frame[qpage], ctr[qpage];
   int i,flag=0;
 
@@ -51,7 +51,7 @@ int findpage_lfu(int p, int qpage) { //Pesquisar e retornar o flag que indica se
     for(i=0; i<full_lfu; i++)
       if(p == frame[i]) {
         flag=1;
-        ctr[i]++; // sempre que È feita uma referÍncia ao contador È incrementado
+        ctr[i]++; // sempre que √© feita uma refer√™ncia ao contador √© incrementado
         break;
       }
   }
