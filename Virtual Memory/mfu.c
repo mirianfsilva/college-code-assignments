@@ -10,8 +10,8 @@ int longestop_mfu(int qpage){
 
 	for (i=0; i<qpage;i++){ctr[i] = 0;}
 
-  max = 0;//Incremento do valor de contador é a mesma que a do LFU
-  for(i=0; i<qpage; i++) //A página com frequência máxima é selecionada
+  max = 0;//Incremento do valor de contador Ã© a mesma que a do LFU
+  for(i=0; i<qpage; i++) //A pÃ¡gina com frequÃªncia mÃ¡xima Ã© selecionada
     if(ctr[max]<ctr[i])
       max=i;
   		repp = max;
