@@ -1,5 +1,5 @@
-#ifndef MATRIZCOMPLEXA_H_INCLUDED
-#define MATRIZCOMPLEXA_H_INCLUDED
+#ifndef MATRIX_H_INCLUDED
+#define MATRIX_H_INCLUDED
 #include <stdio.h>
 #include <stdlib.h>
 #include "complex.h"
@@ -16,4 +16,4 @@ void matriz_multiplica(matriz *prod, matriz *a, matriz *b); /* função que mult
 void matriz_exporta(matriz *produto, FILE *output); /*Função que grava a matriz no arquivo*/
 void libera_matriz(matriz *mat);
 
-#endif // MATRIZCOMPLEXA_H_INCLUDED
+#endif // MATRIX_H_INCLUDED
