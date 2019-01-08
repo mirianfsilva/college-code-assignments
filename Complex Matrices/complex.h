@@ -1,5 +1,5 @@
-#ifndef COMPLEXO_H_INCLUDED
-#define COMPLEXO_H_INCLUDED
+#ifndef COMPLEX_H_INCLUDED
+#define COMPLEX_H_INCLUDED
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,4 +16,4 @@ complexo ler_complexo(char *str); /*Ler os números complexos na forma de um cha
 complexo soma_complexo(complexo num1, complexo num2); /*soma*/
 complexo multiplica_complexo(complexo num1, complexo num2); /*multiplica dois complexos*/
 void escreve_complexo(complexo num, FILE* output); /*Escreve um complexo na forma a+bi*/
-#endif // COMPLEXO_H_INCLUDED
+#endif // COMPLEX_H_INCLUDED
