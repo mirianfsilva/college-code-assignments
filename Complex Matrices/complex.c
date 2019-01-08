@@ -1,4 +1,4 @@
-#include "complexo.h"
+#include "complex.h"
 
 /* Função que cria e inicializa um novo complexo na forma a+bi */
 complexo inicializar_complexo (double real, double imaginario) {
